@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eef7f5;
+    color: #173b3a;
+}
+
+.app {
+    min-height: 100vh;
+}
+
+/* Header */
+
+header {
+    background: #0d5c63;
+    color: white;
+    padding: 22px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+header p {
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.connection {
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.connection span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.online {
+    background: #d9f7e5;
+    color: #16733b;
+}
+
+.online span {
+    background: #20a052;
+}
+
+.offline {
+    background: #ffe0e0;
+    color: #a52a2a;
+}
+
+.offline span {
+    background: #d62828;
+}
+
+/* Main */
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 35px 25px;
+}
+
+.intro {
+    margin-bottom: 25px;
+}
+
+.intro h2 {
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.intro p {
+    color: #617574;
+}
+
+/* Sensor cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    border-left: 5px solid #0d8b8f;
+}
+
+.card h3 {
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+.value {
+    font-size: 38px;
+    font-weight: bold;
+    color: #0d5c63;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #6c7d7c;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 7px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.safe {
+    background: #d9f7e5;
+    color: #16733b;
+}
+
+.alert {
+    background: #ffe0e0;
+    color: #b42318;
+}
+
+/* Overall status */
+
+.overall {
+    margin-top: 25px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.safe-box {
+    background: #e2f8ea;
+    border: 2px solid #48b96b;
+    color: #176b35;
+}
+
+.alert-box {
+    background: #ffe5e5;
+    border: 2px solid #e04b4b;
+    color: #a51f1f;
+}
+
+.overall h2 {
+    margin-bottom: 8px;
+}
+
+.overall p {
+    font-size: 15px;
+}
+
+/* Live data section */
+
+.live-section {
+    margin-top: 30px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.live-section h2 {
+    margin-bottom: 20px;
+}
+
+.data-table {
+    width: 100%;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 15px;
+    border-bottom: 1px solid #e5eeee;
+    align-items: center;
+}
+
+.heading {
+    background: #edf7f6;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+.row:last-child {
+    border-bottom: none;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    main {
+        padding: 25px 15px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .intro h2 {
+        font-size: 23px;
+    }
+
+    .value {
+        font-size: 32px;
+    }
+}
